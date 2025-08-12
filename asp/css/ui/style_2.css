@@ -1,0 +1,77 @@
+.search_field_template{}
+.search_field_template .field_cols{}
+.search_field_template .render_cols{}
+.search_field_title_row{}
+.search_field_title{}
+.search_field_title .ico{}
+.search_field_title .ico.filter{}
+.search_field_title .text_node{}
+.field_acc_container{}
+.field_acc_block{}
+.field_acc_block:last-of-type{}
+.field_acc_block .acc_bar{}
+.field_acc_block .acc_cont{}
+.field_acc_block .acc_title{}
+.field_acc_block .acc_title .ico{}
+.field_acc_block .acc_title .ico.filter{}
+.field_acc_block .acc_title .text_node{}
+
+.role_props_wrap{}
+.role_props_list{}
+.role_props_list > li{}
+.role_props_list.cols_type2{}
+.role_props_list.cols_type2 > li{}
+.role_props_item{}
+input.role_props_dom{}
+input.role_props_dom:checked{}
+input.role_props_dom:checked + .role_props_label{}
+.role_props_label{}
+
+.calendar_inline_render{}
+.calendar_inline_render .ui-datepicker-title{}
+.calendar_inline_render .ui-datepicker-month{}
+.calendar_inline_render .ui-datepicker-calendar{}
+.calendar_inline_render .ui-datepicker-calendar thead th.ui-datepicker-week-end{}
+.calendar_inline_render .ui-datepicker-calendar thead th.ui-datepicker-week-end span{}
+.calendar_inline_render .ui-datepicker-calendar thead th.ui-datepicker-week-end:last-of-type{}
+.calendar_inline_render .ui-datepicker-calendar thead th.ui-datepicker-week-end:last-of-type span{}
+.calendar_inline_render .ui-datepicker-calendar tbody td.ui-datepicker-week-end{}
+.calendar_inline_render .ui-datepicker-calendar tbody td.ui-datepicker-week-end span{}
+.calendar_inline_render .ui-datepicker-calendar tbody td.ui-datepicker-week-end:last-of-type{}
+.calendar_inline_render .ui-datepicker-calendar tbody td.ui-datepicker-week-end:last-of-type span{}
+.calendar_inline_render .ui-state-active, 
+.calendar_inline_render .ui-widget-content .ui-state-active, 
+.calendar_inline_render .ui-widget-header .ui-state-active{}
+
+.calendar_inline_render .ui-state-default, 
+.calendar_inline_render .ui-widget-content .ui-state-default, 
+.calendar_inline_render .ui-widget-header .ui-state-default{}
+
+.calendar_inline_render .ui-datepicker-calendar tbody td{}
+.calendar_inline_render .ui-datepicker td a:hover{}
+
+
+.inline_render_control_group{}
+.irc_block{}
+.irc_block:last-of-type{}
+.btn_rolebox_wrap{}
+.btn_rolebox_list{}
+.btn_rolebox_list > li{}
+.btn_rolebox_list > li:last-of-type{}
+.btn_rolebox_item{}
+.btn_rolebox_item .text_node{}
+.btn_rolebox_item .btn_ico_del{}
+
+
+.btn_grid_container{}
+.btn_grid_cols{}
+.btn_rolecard{}
+.btn_rolecard .text_node{}
+.btn_rolecard .ico{}
+.btn_rolecard .ico.refresh{}
+
+.btn_empbox{}
+.btn_empbox .text_node{}
+
+
+.search_field_template .dataitem_list_wrap{}
