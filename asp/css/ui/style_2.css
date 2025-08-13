@@ -8,11 +8,11 @@
 .search_field_title .text_node{font-size:16px; color:#2d2d2d; display:inline-block; line-height:1.3;}
 .field_acc_container{padding-top:25px;}
 .field_acc_block{padding-bottom:25px;margin-bottom:25px;border-bottom:1px solid #e7e7e7;}
-.field_acc_block:last-of-type{}
-.acc_bar{display:block;padding:0 30px 0 0; position: relative;}
+.field_acc_block:last-of-type{padding-bottom:0;margin-bottom:0;border-bottom:0;}
+.acc_bar{display:block;padding:0 30px 0 0; position: relative; margin-bottom:20px;}
 .acc_bar:after{display:block;content:'';width:10px;height:10px; border-top:1px solid #848484; border-left:1px solid #848484; transform: rotate(225deg); position:absolute;top:5px;right:3px;}
 .acc_cont{display:none;}
-.acc_title{display:flex; align-items: center;}
+.acc_title{display:flex; align-items: center; gap:3px;}
 .acc_title .ico{width:26px;height:26px; flex:0 0 26px; background:url("../../images/icon/ico_filter_slice.png") no-repeat 0 0/100% auto;}
 .acc_title .ico.terms{}
 .acc_title .ico.calendar{background-position:0 -26px;}
@@ -22,18 +22,18 @@
 .field_acc_block.active .acc_cont{display:block;}
 
 .role_props_wrap{}
-.role_props_list{}
-.role_props_list > li{}
+.role_props_list{display:flex; flex-wrap:wrap; gap:10px 0; margin:0 -2px;}
+.role_props_list > li{flex:0 0 33.33333333%;box-sizing: border-box; padding:0 2px;}
 .role_props_list.cols_type2{}
 .role_props_list.cols_type2 > li{}
-.role_props_item{}
-input.role_props_dom{}
+.role_props_item{display:flex;}
+input.role_props_dom{flex:0;width:0;height:0;box-sizing: content-box;overflow:hidden;}
 input.role_props_dom:checked{}
-input.role_props_dom:checked + .role_props_label{}
-.role_props_label{}
+input.role_props_dom:checked + .role_props_label{color:#176bdd; border-color:#176bdd;}
+.role_props_label{color:#4e4e4e; cursor: pointer; flex:1; border:1px solid #c6c6c6; border-radius: 5px; box-sizing: border-box; min-height:30px; padding:5px; display:flex;align-items: center; text-align: center; justify-content: center; align-items: center;}
 
 .calendar_inline_render{}
-.calendar_inline_render .ui-datepicker-title{}
+.calendar_inline_render .ui-datepicker-title{color:#2d2d2d; font-weight:400; font-size:16px;}
 .calendar_inline_render .ui-datepicker-month{}
 .calendar_inline_render .ui-datepicker-calendar{}
 .calendar_inline_render .ui-datepicker-calendar thead th.ui-datepicker-week-end{}
@@ -46,7 +46,7 @@ input.role_props_dom:checked + .role_props_label{}
 .calendar_inline_render .ui-datepicker-calendar tbody td.ui-datepicker-week-end:last-of-type span{}
 .calendar_inline_render .ui-state-active, 
 .calendar_inline_render .ui-widget-content .ui-state-active, 
-.calendar_inline_render .ui-widget-header .ui-state-active{}
+.calendar_inline_render .ui-widget-header .ui-state-active{background-color:#176bdd !important;}
 
 .calendar_inline_render .ui-state-default, 
 .calendar_inline_render .ui-widget-content .ui-state-default, 
@@ -55,29 +55,40 @@ input.role_props_dom:checked + .role_props_label{}
 .calendar_inline_render .ui-datepicker-calendar tbody td{}
 .calendar_inline_render .ui-datepicker td a:hover{}
 
+.calendar_inline_render .ui-datepicker .ui-datepicker-next,
+.calendar_inline_render .ui-datepicker .ui-datepicker-prev{width:30px;height:30px;border-radius: 0; top:8px;}
+.calendar_inline_render .ui-datepicker .ui-datepicker-next{right:55px;}
+.calendar_inline_render .ui-datepicker .ui-datepicker-prev{left:55px;}
+.calendar_inline_render .ui-datepicker .ui-datepicker-next .ui-icon, 
+.calendar_inline_render .ui-datepicker .ui-datepicker-prev .ui-icon{width:10px;height:10px;border-right:1px solid #a1a1a1; border-bottom:1px solid #a1a1a1;margin:-5px 0 0 -2px;}
+.calendar_inline_render .ui-datepicker .ui-datepicker-next .ui-icon{margin-left:-8px;}
 
-.inline_render_control_group{}
-.irc_block{}
+.inline_render_control_group{margin-top:10px;}
+.irc_block{border-top:1px solid #e7e7e7;padding:20px 15px;}
 .irc_block:last-of-type{}
 .btn_rolebox_wrap{}
-.btn_rolebox_list{}
+.btn_rolebox_list{display:flex; flex-wrap:wrap; gap:8px 5px;}
 .btn_rolebox_list > li{}
 .btn_rolebox_list > li:last-of-type{}
-.btn_rolebox_item{}
-.btn_rolebox_item .text_node{}
-.btn_rolebox_item .btn_ico_del{}
+.btn_rolebox_item{display:inline-flex;border:1px solid #ececec; border-radius:8px; align-items: center; gap:5px; padding:8px 10px;}
+.btn_rolebox_item .text_node{display:inline-block; font-size:13px; color:#4e4e4e; line-height:1;}
+.btn_rolebox_item .btn_ico_del{width:14px;height:14px; flex:0 0 14px; display:inline-block;background:url("../../images/icon/ico_delete.png") no-repeat 50% 50%/9px auto;}
+.btn_rolebox_item .btn_ico_del:before,
+.btn_rolebox_item .btn_ico_del:after{}
+.btn_rolebox_item .btn_ico_del:before{}
+.btn_rolebox_item .btn_ico_del:after{}
 
-
-.btn_grid_container{}
+.btn_grid_container{display:flex; align-items: center; gap:40px;}
 .btn_grid_cols{}
-.btn_rolecard{}
-.btn_rolecard .text_node{}
-.btn_rolecard .ico{}
-.btn_rolecard .ico.refresh{}
+.btn_grid_cols.long_type{flex:1;}
+.btn_rolecard{display:inline-flex;border:1px solid #ececec; border-radius:8px; align-items: center; gap:5px; padding:8px 10px;}
+.btn_rolecard .text_node{display:inline-block; font-size:13px; color:#4e4e4e; line-height:1;}
+.btn_rolecard .ico{width:14px;height:14px; flex:0 0 14px; display:inline-block; background-position:0 0; background-size:100% auto; background-repeat: no-repeat;}
+.btn_rolecard .ico.refresh{background-image:url("../../images/icon/ico_refresh_14.png");}
 
-.btn_empbox{}
-.btn_empbox .text_node{}
-
+.btn_empbox{display:flex;align-items: center; justify-content: center; text-align: center; min-height:36px; background:#212121; border-radius: 100px;}
+.btn_empbox .text_node{font-size:14px; color:#fff; display:inline-block; padding-right:16px; position:relative;}
+.btn_empbox .text_node:after{display:block; content:''; width:9px;height:9px; border-top:1px solid #fff; border-right:1px solid #fff; transform: rotate(45deg); position:absolute;top:5px;right:3px;}
 
 .search_field_template .dataitem_list_wrap{}
 

@@ -26,6 +26,9 @@
     <div class="page_wrap">
       <section class="middle_wrap">
         <div class="middle_inner_wrap">
+          <br />
+          <br />
+          <br />
           <div class="middle_inner_guide_wrap">
             <!-- 상품리스트 -->
             <div class="search_field_template">
@@ -87,7 +90,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="field_acc_block">
+                  <div class="field_acc_block active">
                     <a href="#" class="acc_bar">
                       <p class="acc_title">
                         <i class="ico calendar"></i>
@@ -149,7 +152,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="field_acc_block">
+                  <div class="field_acc_block active">
                     <a href="#" class="acc_bar">
                       <p class="acc_title">
                         <i class="ico calendar"></i>
@@ -212,7 +215,7 @@
                             <div class="btn_grid_cols">
                               <a href="javascript:;" class="btn_rolecard"><span class="text_node">초기화</span><i class="ico refresh"></i></a>
                             </div>
-                            <div class="btn_grid_cols">
+                            <div class="btn_grid_cols long_type">
                               <a href="javascript:;" class="btn_empbox"><span class="text_node">상품보기</span></a>
                             </div>
                           </div>
@@ -408,6 +411,9 @@
             </div>
             <!-- // 상품리스트 -->
           </div>
+          <br />
+          <br />
+          <br />
         </div>
       </section>
     </div>
@@ -422,6 +428,12 @@
           currentText: '오늘',
           prevText: '〈',
           nextText: '〉',
+        });
+
+        // 아코디언
+        $('.acc_bar').on('click', function (e) {
+          e.preventDefault();
+          $(this).closest('.field_acc_block').toggleClass('active');
         });
       });
     </script>
