@@ -1,20 +1,25 @@
-.search_field_template{}
-.search_field_template .field_cols{}
-.search_field_template .render_cols{}
-.search_field_title_row{}
-.search_field_title{}
-.search_field_title .ico{}
-.search_field_title .ico.filter{}
-.search_field_title .text_node{}
-.field_acc_container{}
-.field_acc_block{}
+.search_field_template{display:flex;gap:40px;}
+.search_field_template .field_cols{flex:0 0 286px; width:286px;}
+.search_field_template .render_cols{flex:1; min-width:0;}
+.search_field_title_row{border-bottom:1px solid #cacaca;padding:6px 0 20px;}
+.search_field_title{display:flex; align-items: center; gap:10px;}
+.search_field_title .ico{flex:0 0 22px; width:22px; height:22px; display:block; background-position: 0 0; background-size:100% auto; background-repeat:no-repeat;}
+.search_field_title .ico.filter{background-image:url("../../images/icon/ico_filter_22.png")}
+.search_field_title .text_node{font-size:16px; color:#2d2d2d; display:inline-block; line-height:1.3;}
+.field_acc_container{padding-top:25px;}
+.field_acc_block{padding-bottom:25px;margin-bottom:25px;border-bottom:1px solid #e7e7e7;}
 .field_acc_block:last-of-type{}
-.field_acc_block .acc_bar{}
-.field_acc_block .acc_cont{}
-.field_acc_block .acc_title{}
-.field_acc_block .acc_title .ico{}
-.field_acc_block .acc_title .ico.filter{}
-.field_acc_block .acc_title .text_node{}
+.acc_bar{display:block;padding:0 30px 0 0; position: relative;}
+.acc_bar:after{display:block;content:'';width:10px;height:10px; border-top:1px solid #848484; border-left:1px solid #848484; transform: rotate(225deg); position:absolute;top:5px;right:3px;}
+.acc_cont{display:none;}
+.acc_title{display:flex; align-items: center;}
+.acc_title .ico{width:26px;height:26px; flex:0 0 26px; background:url("../../images/icon/ico_filter_slice.png") no-repeat 0 0/100% auto;}
+.acc_title .ico.terms{}
+.acc_title .ico.calendar{background-position:0 -26px;}
+.acc_title .text_node{font-size:16px; color:#2d2d2d; display:inline-block; line-height:1.3;}
+
+.field_acc_block.active .acc_bar:after{transform: rotate(45deg); top:10px;}
+.field_acc_block.active .acc_cont{display:block;}
 
 .role_props_wrap{}
 .role_props_list{}
@@ -75,3 +80,6 @@ input.role_props_dom:checked + .role_props_label{}
 
 
 .search_field_template .dataitem_list_wrap{}
+
+.search_field_template .render_cols .thumnail_hordata_item{}
+.search_field_template .render_cols .thumnail_hordata_imgcols{flex-basis: 240px;margin-right:20px; height:240px;}
