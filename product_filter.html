@@ -38,8 +38,9 @@
                     <i class="ico filter"></i>
                     <span class="text_node">필터</span>
                   </p>
+                  <button class="btn_search_filter_toggle active"></button>
                 </div>
-                <div class="field_acc_container">
+                <div class="field_acc_container active">
                   <div class="field_acc_block active">
                     <a href="#" class="acc_bar">
                       <p class="acc_title">
@@ -435,6 +436,30 @@
           e.preventDefault();
           $(this).closest('.field_acc_block').toggleClass('active');
         });
+        $('.field_acc_block').addClass('active');
+        $('.btn_search_filter_toggle').on('click', function (e) {
+          $(this).toggleClass('active');
+          $('.field_acc_container').toggleClass('active');
+        });
+
+        let $currentWidth = $(window).width();
+        $(window).on('resize', function () {
+          if ($currentWidth === $(window).width()) {
+            return;
+          }
+          resizeAction();
+          $currentWidth = $(window).width();
+        });
+        resizeAction();
+
+        function resizeAction() {
+          if ($(window).width() > 1023) {
+            $('.field_acc_container').addClass('active');
+          } else {
+            $('.btn_search_filter_toggle').removeClass('active');
+            $('.field_acc_container').removeClass('active');
+          }
+        }
       });
     </script>
   </body>

@@ -1390,7 +1390,7 @@ select.select_item:disabled{background-color:#f7f7f7;color:#999999;opacity:1;}
 .elsedata_value_cols{display:table-cell;vertical-align: top;padding-bottom:4px;}
 .elsedata_key_cols{width:1px;padding-right:10px;}
 .elsdata_key_text{font-size:14px;color:#333333;display:flex;align-items: center;white-space: nowrap;}
-.elsdata_key_text:before{display:block;content:'';width:16px;height:16px;flex:0 0 16px;position:relative;top:1px;margin-right:6px;background:url("/asp/images/icon/ico_calendar_item.png") no-repeat 0 0/100% auto;}
+.elsdata_key_text:before{display:block;content:'';width:16px;height:16px;flex:0 0 16px;position:relative;top:1px;margin-right:6px;background:url("../../images/icon/ico_calendar_item.png") no-repeat 0 0/100% auto;}
 .elsedata_key_value{font-size:14px;color:#4e4e4e;}
 .price_horspec_row{display:flex;justify-content: space-between;align-items: center;margin-top:20px;}
 .price_horspec_cols{}

@@ -1,16 +1,21 @@
 .search_field_template{display:flex;gap:40px;}
 .search_field_template .field_cols{flex:0 0 286px; width:286px;}
 .search_field_template .render_cols{flex:1; min-width:0;}
-.search_field_title_row{border-bottom:1px solid #cacaca;padding:6px 0 20px;}
+.search_field_title_row{border-bottom:1px solid #cacaca;padding:6px 0 20px; display:flex; justify-content: space-between; align-items: center; gap:20px;}
 .search_field_title{display:flex; align-items: center; gap:10px;}
+.btn_search_filter_toggle{width:30px;height:30px;position:relative; display:none;}
+.btn_search_filter_toggle:after{display:block;content:'';width:10px;height:10px; border-top:1px solid #848484; border-left:1px solid #848484; transform: rotate(225deg); position:absolute;top:7px;right:10px;}
+.btn_search_filter_toggle.active:after{transform: rotate(45deg); top:13px;}
+
 .search_field_title .ico{flex:0 0 22px; width:22px; height:22px; display:block; background-position: 0 0; background-size:100% auto; background-repeat:no-repeat;}
 .search_field_title .ico.filter{background-image:url("../../images/icon/ico_filter_22.png")}
 .search_field_title .text_node{font-size:16px; color:#2d2d2d; display:inline-block; line-height:1.3;}
-.field_acc_container{padding-top:25px;}
-.field_acc_block{padding-bottom:25px;margin-bottom:25px;border-bottom:1px solid #e7e7e7;}
-.field_acc_block:last-of-type{padding-bottom:0;margin-bottom:0;border-bottom:0;}
+.field_acc_container{padding-top:25px;display:none;}
+.field_acc_container.active{display:block;}
+.field_acc_block{margin-bottom:20px;border-bottom:1px solid #e7e7e7;}
+.field_acc_block:last-of-type{padding-bottom:0 !important;margin-bottom:0;}
 .acc_bar{display:block;padding:0 30px 0 0; position: relative; margin-bottom:20px;}
-.acc_bar:after{display:block;content:'';width:10px;height:10px; border-top:1px solid #848484; border-left:1px solid #848484; transform: rotate(225deg); position:absolute;top:5px;right:3px;}
+.acc_bar:after{display:block;content:'';width:10px;height:10px; border-top:1px solid #848484; border-left:1px solid #848484; transform: rotate(225deg); position:absolute;top:5px;right:10px;}
 .acc_cont{display:none;}
 .acc_title{display:flex; align-items: center; gap:3px;}
 .acc_title .ico{width:26px;height:26px; flex:0 0 26px; background:url("../../images/icon/ico_filter_slice.png") no-repeat 0 0/100% auto;}
@@ -18,6 +23,7 @@
 .acc_title .ico.calendar{background-position:0 -26px;}
 .acc_title .text_node{font-size:16px; color:#2d2d2d; display:inline-block; line-height:1.3;}
 
+.field_acc_block.active{padding-bottom:25px;}
 .field_acc_block.active .acc_bar:after{transform: rotate(45deg); top:10px;}
 .field_acc_block.active .acc_cont{display:block;}
 
@@ -50,7 +56,7 @@ input.role_props_dom:checked + .role_props_label{color:#176bdd; border-color:#17
 
 .calendar_inline_render .ui-state-default, 
 .calendar_inline_render .ui-widget-content .ui-state-default, 
-.calendar_inline_render .ui-widget-header .ui-state-default{}
+.calendar_inline_render .ui-widget-header .ui-state-default{margin:0 auto;}
 
 .calendar_inline_render .ui-datepicker-calendar tbody td{}
 .calendar_inline_render .ui-datepicker td a:hover{}
@@ -70,7 +76,7 @@ input.role_props_dom:checked + .role_props_label{color:#176bdd; border-color:#17
 .btn_rolebox_list{display:flex; flex-wrap:wrap; gap:8px 5px;}
 .btn_rolebox_list > li{}
 .btn_rolebox_list > li:last-of-type{}
-.btn_rolebox_item{display:inline-flex;border:1px solid #ececec; border-radius:8px; align-items: center; gap:5px; padding:8px 10px;}
+.btn_rolebox_item{display:inline-flex;border:1px solid #ececec; border-radius:8px; align-items: center; gap:5px; padding:8px 10px; background:#fbfbfb;}
 .btn_rolebox_item .text_node{display:inline-block; font-size:13px; color:#4e4e4e; line-height:1;}
 .btn_rolebox_item .btn_ico_del{width:14px;height:14px; flex:0 0 14px; display:inline-block;background:url("../../images/icon/ico_delete.png") no-repeat 50% 50%/9px auto;}
 .btn_rolebox_item .btn_ico_del:before,
@@ -94,3 +100,11 @@ input.role_props_dom:checked + .role_props_label{color:#176bdd; border-color:#17
 
 .search_field_template .render_cols .thumnail_hordata_item{}
 .search_field_template .render_cols .thumnail_hordata_imgcols{flex-basis: 240px;margin-right:20px; height:240px;}
+
+@media (max-width:1023px){
+    .btn_search_filter_toggle{display:block;}
+    .search_field_template{flex-direction: column;}
+    .search_field_template .field_cols{width:auto; flex-basis: 100%;}
+    .search_field_template .render_cols .thumnail_hordata_imgcols{margin-right:0;height:160px;}
+
+}
